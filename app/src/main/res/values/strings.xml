@@ -1,1 +1,14 @@
-<resources></resources>
+<resources>
+    <string name="app_name">jsleep-android</string>
+    <string name="username">Username</string>
+    <string name="jsleep">JSLEEP</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="register_now">Register Now!</string>
+    <string name="password_regis">Password</string>
+    <string name="email_regis">Email</string>
+    <string name="name_regis">Name</string>
+    <string name="register">REGISTER</string>
+    <string name="hello_user">Hello User!</string>
+</resources>
