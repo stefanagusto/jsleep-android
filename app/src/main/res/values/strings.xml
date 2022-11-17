@@ -11,4 +11,14 @@
     <string name="name_regis">Name</string>
     <string name="register">REGISTER</string>
     <string name="hello_user">Hello User!</string>
+    <string name="account_details">Account Details</string>
+    <string name="account">Account</string>
+    <string name="amount">Amount</string>
+    <string name="top_up">top up</string>
+    <string name="balance">Balance</string>
+    <string name="_0_0">0.0</string>
+    <string name="email">Email</string>
+    <string name="stefan">Stefan</string>
+    <string name="name">Name</string>
+    <string name="stefanhutapea_gmail_com">stefanhutapea@gmail.com</string>
 </resources>
