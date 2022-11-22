@@ -12,12 +12,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
+import com.stefanagustohutapeajsleepdn.jsleep_android.model.Account;
 import com.stefanagustohutapeajsleepdn.jsleep_android.model.Room;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static Account loginAccount;
+    public static Account requestRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

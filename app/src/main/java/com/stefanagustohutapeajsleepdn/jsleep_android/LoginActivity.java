@@ -1,7 +1,5 @@
 package com.stefanagustohutapeajsleepdn.jsleep_android;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.stefanagustohutapeajsleepdn.jsleep_android.model.Account;
 import com.stefanagustohutapeajsleepdn.jsleep_android.request.BaseApiService;
@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         username = findViewById(R.id.UsernameLogin);
         password = findViewById(R.id.PasswordLogin);
 
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,9 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Account account = requestAccount();
-                Intent move = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(move);
-                Toast.makeText(getApplicationContext(),"Login Successful", Toast.LENGTH_SHORT).show();
+                Account login = requestLogin();
             }
         });
     }
@@ -71,4 +70,27 @@ public class LoginActivity extends AppCompatActivity {
         });
         return null;
     }
+
+    protected Account requestLogin() {
+        String username = this.username.getText().toString();
+        String password = this.password.getText().toString();
+        mApiService.loginAccount(username, password).enqueue(new Callback<Account>() {
+            @Override
+            public void onResponse(Call<Account> call, Response<Account> response) {
+                if (response.isSuccessful()) {
+                    MainActivity.loginAccount = response.body();
+                    Intent move = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(move);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Account> call, Throwable t) {
+                Toast.makeText(mContext, "Login Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return null;
+    }
+
+
 }
