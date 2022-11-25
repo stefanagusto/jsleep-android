@@ -1,5 +1,15 @@
 package com.stefanagustohutapeajsleepdn.jsleep_android.model;
 
 public enum BedType {
-    DOUBLE, SINGLE, QUEEN, KING
+    ENUM("DOUBLE, SINGLE, QUEEN, KING");
+
+    private String BedTypeEnum;
+
+    private BedType(String BedTypeEnum){
+        this.BedTypeEnum = BedTypeEnum;
+    }
+
+    @Override public String toString(){
+        return BedTypeEnum;
+    }
 }

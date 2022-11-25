@@ -21,4 +21,16 @@
     <string name="stefan">Stefan</string>
     <string name="name">Name</string>
     <string name="stefanhutapea_gmail_com">stefanhutapea@gmail.com</string>
+    <string name="register_renter">Register Renter</string>
+    <string name="namerenter">Name</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="cancel">cancel</string>
+    <string name="register_aboutme">register</string>
+    <string name="nameRegister">Name</string>
+    <string name="name_renter">Name</string>
+    <string name="address_renter">Address</string>
+    <string name="phone_number_renter">Phone Number</string>
+    <string name="address_reg">Address</string>
+    <string name="name_create">Name</string>
 </resources>

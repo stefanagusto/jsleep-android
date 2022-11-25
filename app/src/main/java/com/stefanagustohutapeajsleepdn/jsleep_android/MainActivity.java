@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static Account loginAccount;
     public static Account requestRegister;
+    Button addBoxBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.view_list);
         listView.setAdapter(adapter);
 
+        if (MainActivity.loginAccount.renter == null) {
+
+        }
     }
 
     @Override

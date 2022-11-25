@@ -10,8 +10,10 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="People Button"
         app:showAsAction="collapseActionView|always"/>
-    <item android:id="@+id/AddBoxButton"
+    <item
+        android:id="@+id/AddBoxButton"
         android:icon="@drawable/ic_baseline_add_box_24"
         android:title="Add Box"
-        app:showAsAction="collapseActionView|always"/>
+        android:visibility="invisible"
+        app:showAsAction="collapseActionView|always" />
 </menu>
