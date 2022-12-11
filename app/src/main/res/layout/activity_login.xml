@@ -10,49 +10,48 @@
         android:id="@+id/PasswordLogin"
         android:layout_width="328dp"
         android:layout_height="75dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="12dp"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/password"
         android:inputType="text|textPassword"
         android:textColor="#0B0A0A"
         android:textColorHint="#78909C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
+        app:layout_constraintTop_toBottomOf="@+id/UsernameLogin" />
 
     <EditText
         android:id="@+id/UsernameLogin"
         android:layout_width="328dp"
         android:layout_height="75dp"
+        android:layout_marginTop="12dp"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/username"
         android:inputType="textEmailAddress"
         android:textColorHint="#78909C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="88dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_light"
         android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintTop_toBottomOf="@+id/PasswordLogin" />
 
     <TextView
         android:id="@+id/Jsleep"
@@ -60,39 +59,66 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="155dp"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="152dp"
-        android:fontFamily="@font/brawler"
+        android:fontFamily="@font/poppins_light"
         android:text="@string/jsleep"
+
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/UsernameLogin"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
 
     <TextView
         android:id="@+id/DontHaveAccountLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
         android:text="@string/don_t_have_account"
         android:textColorHint="#0A000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/RegisterLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
         android:text="@string/register_now"
         android:textColor="#1620D6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DontHaveAccountLogin"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <Switch
+        android:id="@+id/switchDarkMode"
+        android:layout_width="140dp"
+        android:layout_height="41dp"
+        android:text="Dark Mode"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.856"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.044" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="151dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Jsleep"
+        app:srcCompat="@drawable/image_removebg_preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

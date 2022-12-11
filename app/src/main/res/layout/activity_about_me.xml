@@ -8,95 +8,115 @@
 
     <TextView
         android:id="@+id/nameOfUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
+        android:layout_width="169dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="334dp"
+        android:layout_marginEnd="36dp"
+        android:gravity="right"
         android:text="@string/stefan"
-        app:layout_constraintBottom_toTopOf="@+id/emailOfUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
-
-    <TextView
-        android:id="@+id/balanceOfUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:text="@string/_0_0"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
-
-    <TextView
-        android:id="@+id/emailOfUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/stefanhutapea_gmail_com"
-        app:layout_constraintBottom_toTopOf="@+id/balanceOfUser"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/titleUser"
-        android:layout_width="152dp"
-        android:layout_height="29dp"
-        android:hint="@string/account"
-        android:text="@string/account_details"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.335"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
-
-    <TextView
-        android:id="@+id/nameUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        app:layout_constraintBottom_toTopOf="@+id/emailUser"
-        app:layout_constraintEnd_toStartOf="@+id/nameOfUser"
-        app:layout_constraintHorizontal_bias="0.242"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleUser"
-        app:layout_constraintVertical_bias="0.685" />
-
-    <TextView
-        android:id="@+id/emailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/email"
-        app:layout_constraintBottom_toTopOf="@+id/balanceUser"
-        app:layout_constraintEnd_toStartOf="@+id/emailOfUser"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.147" />
 
     <TextView
         android:id="@+id/balanceUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/balance"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/balanceOfUser"
-        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleUser"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <TextView
+        android:id="@+id/emailOfUser"
+        android:layout_width="169dp"
+        android:layout_height="20dp"
+        android:gravity="right"
+        android:text="@string/stefanhutapea_gmail_com"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/emailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/nameUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/balanceOfUser"
+        android:layout_width="169dp"
+        android:layout_height="20dp"
+        android:gravity="right"
+        android:text="@string/_0_0"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/titleUser"
+        android:layout_width="152dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="179dp"
+        android:hint="@string/account"
+        android:text="@string/account_details"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
 
     <Button
         android:id="@+id/buttonTopup"
         android:layout_width="102dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="60dp"
         android:text="@string/top_up"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <EditText
         android:id="@+id/amountUser"
@@ -109,25 +129,119 @@
         android:text=""
         android:textColor="#757575"
         android:visibility="visible"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonTopup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleUser"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:onClick="cancelClick"
+        android:text="@string/cancel"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <TextView
+        android:id="@+id/nameOfRenter"
+        android:layout_width="155dp"
+        android:layout_height="29dp"
+        android:gravity="right"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
+
+    <TextView
+        android:id="@+id/address_renter"
+        android:layout_width="67dp"
+        android:layout_height="29dp"
+        android:hint="@string/address_reg"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:onClick="registerClick"
+        android:text="@string/register_aboutme"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <EditText
+        android:id="@+id/address_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/addressOfRenter"
+        android:layout_width="155dp"
+        android:layout_height="29dp"
+        android:gravity="right"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
 
     <Button
         android:id="@+id/buttonRegisterRenter"
         android:layout_width="282dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/poppins_light"
         android:onClick="registerRenClick"
         android:text="@string/register_renter"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <EditText
         android:id="@+id/name_register"
@@ -139,108 +253,28 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/address_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterRenter"
-        app:layout_constraintVertical_bias="0.514"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <EditText
-        android:id="@+id/address_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="24dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/phoneNum_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addressOfRenter"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <EditText
-        android:id="@+id/phoneNum_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        android:text=""
-        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNum_renter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
         tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="119dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:onClick="registerClick"
-        android:text="@string/register_aboutme"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCancel"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNum_register"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/buttonCancel"
-        android:layout_width="119dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="64dp"
-        android:onClick="cancelClick"
-        android:text="@string/cancel"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNum_register"
-        app:layout_constraintVertical_bias="0.555" />
 
     <TextView
-        android:id="@+id/name_renter"
-        android:layout_width="69dp"
+        android:id="@+id/phoneNumOfRenter"
+        android:layout_width="150dp"
         android:layout_height="29dp"
-        android:layout_marginStart="69dp"
-        android:layout_marginEnd="273dp"
-        android:hint="Name"
-        android:text="@string/name_renter"
+        android:gravity="right"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/address_renter"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.827"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterRenter"
-        app:layout_constraintVertical_bias="0.111" />
-
-    <TextView
-        android:id="@+id/address_renter"
-        android:layout_width="67dp"
-        android:layout_height="29dp"
-        android:hint="@string/address_reg"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/address_register"
-        app:layout_constraintEnd_toStartOf="@+id/addressOfRenter"
-        app:layout_constraintHorizontal_bias="0.371"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_register"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756" />
 
     <TextView
         android:id="@+id/phoneNum_renter"
@@ -249,48 +283,47 @@
         android:hint="Phone Number"
         android:text=""
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/phoneNum_register"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_register"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756" />
+
+    <EditText
+        android:id="@+id/phoneNum_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:text=""
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/nameOfRenter"
-        android:layout_width="155dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="119dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/name_register"
+        android:id="@+id/name_renter"
+        android:layout_width="69dp"
+        android:layout_height="29dp"
+        android:hint="Name"
+        android:text="@string/name_renter"
+        android:visibility="invisible"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/name_renter"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterRenter" />
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
 
-    <TextView
-        android:id="@+id/addressOfRenter"
-        android:layout_width="155dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="87dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
-        app:layout_constraintStart_toEndOf="@+id/name_register"
-        app:layout_constraintTop_toBottomOf="@+id/name_register" />
-
-    <TextView
-        android:id="@+id/phoneNumOfRenter"
-        android:layout_width="155dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="91dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCancel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/phoneNum_renter"
-        app:layout_constraintTop_toBottomOf="@+id/addressOfRenter"
-        app:layout_constraintVertical_bias="0.289" />
 </androidx.constraintlayout.widget.ConstraintLayout>

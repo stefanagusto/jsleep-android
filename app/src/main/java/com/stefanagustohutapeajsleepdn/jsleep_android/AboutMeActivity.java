@@ -22,8 +22,8 @@ import retrofit2.Response;
 public class AboutMeActivity extends AppCompatActivity {
         BaseApiService mApiService;
         TextView name, email, balance, nameRent, addRent, phoneRent, nameOfRent, addOfRent, phoneOfRent;
-        EditText nameReg, addReg, phoneReg;
-        Button regBtn, cancelBtn, regRenBtn;
+        EditText nameReg, addReg, phoneReg, amountTopUp;
+        Button regBtn, cancelBtn, regRenBtn, topupBtn;
         Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,13 @@ public class AboutMeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_me);
         mApiService = UtilsApi.getApiService();
         mContext = this;
+        topupBtn = findViewById(R.id.buttonTopup);
+        topupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                topUpRequest();
+            }
+        });
 
         name = findViewById(R.id.nameOfUser);
         email = findViewById(R.id.emailOfUser);
@@ -50,6 +57,8 @@ public class AboutMeActivity extends AppCompatActivity {
         regRenBtn = findViewById(R.id.buttonRegisterRenter);
         regBtn = findViewById(R.id.buttonRegister);
         cancelBtn = findViewById(R.id.buttonCancel);
+        amountTopUp = findViewById(R.id.amountUser);
+
         if (MainActivity.loginAccount.renter != null) {
             nameOfRent.setText(MainActivity.loginAccount.renter.username);
             addOfRent.setText(MainActivity.loginAccount.renter.address);
@@ -57,6 +66,9 @@ public class AboutMeActivity extends AppCompatActivity {
             nameRent.setVisibility(View.VISIBLE);
             addRent.setVisibility(View.VISIBLE);
             phoneRent.setVisibility(View.VISIBLE);
+            nameOfRent.setVisibility(View.VISIBLE);
+            addOfRent.setVisibility(View.VISIBLE);
+            phoneOfRent.setVisibility(View.VISIBLE);
         }
         if (MainActivity.loginAccount.renter == null) {
             regRenBtn.setVisibility(View.VISIBLE);
@@ -90,12 +102,35 @@ public class AboutMeActivity extends AppCompatActivity {
         cancelBtn.setVisibility(Button.INVISIBLE);
     }
 
+    protected Boolean topUpRequest(){
+        Double topUpAmount = Double.parseDouble(amountTopUp.getText().toString());
+        mApiService.topUp(MainActivity.loginAccount.id, Double.parseDouble(amountTopUp.getText().toString())).enqueue(new Callback<Boolean>() {
+            @Override
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                if (response.isSuccessful()) {
+                    Toast.makeText(mContext, "Top Up Success", Toast.LENGTH_SHORT).show();
+                    MainActivity.loginAccount.balance += topUpAmount;
+                    balance.setText(String.valueOf(MainActivity.loginAccount.balance));
+                } else {
+                    Toast.makeText(mContext, "Top Up Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Boolean> call, Throwable t) {
+                Toast.makeText(mContext, "Top Up Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return false;
+    }
+
+
     protected Account registerRenter(){
         mApiService.registerRenter(
                 MainActivity.loginAccount.id,
-                nameRent.getText().toString(),
-                phoneRent.getText().toString(),
-                addRent.getText().toString()
+                nameReg.getText().toString(),
+                addReg.getText().toString(),
+                phoneReg.getText().toString()
         ).enqueue(new Callback<Renter>() {
             @Override
             public void onResponse(Call<Renter> call, Response<Renter> response) {
@@ -103,12 +138,20 @@ public class AboutMeActivity extends AppCompatActivity {
                     MainActivity.loginAccount.renter = response.body();
                     Toast.makeText(mContext, "Register Renter Success", Toast.LENGTH_SHORT).show();
                     System.out.println(response.body());
+                    System.out.println(MainActivity.loginAccount.id);
+                    System.out.println(nameReg.getText().toString());
+                    System.out.println(MainActivity.loginAccount.renter.username);
+                    System.out.println(MainActivity.loginAccount.renter.address);
+                    System.out.println(MainActivity.loginAccount.renter.phoneNumber);
                     nameOfRent.setText(MainActivity.loginAccount.renter.username);
                     addOfRent.setText(MainActivity.loginAccount.renter.address);
                     phoneOfRent.setText(MainActivity.loginAccount.renter.phoneNumber);
                     nameRent.setVisibility(View.VISIBLE);
                     addRent.setVisibility(View.VISIBLE);
                     phoneRent.setVisibility(View.VISIBLE);
+                    nameOfRent.setVisibility(View.VISIBLE);
+                    addOfRent.setVisibility(View.VISIBLE);
+                    phoneOfRent.setVisibility(View.VISIBLE);
                 }
             }
             @Override

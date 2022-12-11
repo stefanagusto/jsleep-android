@@ -57,7 +57,6 @@ public class RegisterActivity extends AppCompatActivity {
                     startActivity(move);
                 }
             }
-
             @Override
             public void onFailure(Call<Account> call, Throwable t) {
                 System.out.println(t.toString());

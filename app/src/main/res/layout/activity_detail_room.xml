@@ -6,222 +6,390 @@
     android:layout_height="match_parent"
     tools:context=".DetailRoomActivity">
 
+    <CheckBox
+        android:id="@+id/fitnessBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
+        android:text="Fitness Center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <TextView
+        android:id="@+id/addressOfRoom"
+        android:layout_width="176dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="303dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <TextView
+        android:id="@+id/detail_room"
+        android:layout_width="121dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="300dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Detail Room"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <TextView
+        android:id="@+id/nameOfRoom"
+        android:layout_width="139dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="right"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/name_room"
+        android:layout_width="73dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="162dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Name"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/price_room"
+        android:layout_width="73dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="162dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <TextView
+        android:id="@+id/bedTypeRoom"
+        android:layout_width="139dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="right"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+
     <TextView
         android:id="@+id/facility_room"
         android:layout_width="73dp"
         android:layout_height="27dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="303dp"
-        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/poppins_light"
         android:text="Facility"
-        app:layout_constraintBottom_toTopOf="@+id/refrigeratorBox"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/nameOfRoom"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="19dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/bedTypeRoom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/bedTypeRoom"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="24dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/sizeOfRoom"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/sizeOfRoom"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="21dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/priceOfRoom"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/priceOfRoom"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="199dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox14"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/addressOfRoom"
-        android:layout_width="73dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="303dp"
-        android:layout_marginBottom="20dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/facility_room"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422" />
 
     <TextView
         android:id="@+id/address_room"
         android:layout_width="73dp"
         android:layout_height="27dp"
-        android:layout_marginStart="35dp"
         android:layout_marginEnd="303dp"
-        android:layout_marginBottom="17dp"
+        android:fontFamily="@font/poppins_light"
         android:text="Address"
-        app:layout_constraintBottom_toTopOf="@+id/addressOfRoom"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/detail_room"
-        android:layout_width="76dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginBottom="44dp"
-        android:text="Detail Room"
-        app:layout_constraintBottom_toTopOf="@+id/name_room"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
 
     <TextView
-        android:id="@+id/name_room"
-        android:layout_width="73dp"
+        android:id="@+id/sizeOfRoom"
+        android:layout_width="139dp"
         android:layout_height="27dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="19dp"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/bedtype_room"
-        app:layout_constraintEnd_toStartOf="@+id/nameOfRoom"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="right"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
 
     <TextView
         android:id="@+id/bedtype_room"
         android:layout_width="73dp"
         android:layout_height="27dp"
-        android:layout_marginStart="35dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins_light"
         android:text="BedType"
-        app:layout_constraintBottom_toTopOf="@+id/size_room"
-        app:layout_constraintEnd_toStartOf="@+id/bedTypeRoom"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
 
     <TextView
-        android:id="@+id/price_room"
-        android:layout_width="73dp"
+        android:id="@+id/priceOfRoom"
+        android:layout_width="139dp"
         android:layout_height="27dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="22dp"
-        android:text="Price"
-        app:layout_constraintBottom_toTopOf="@+id/address_room"
-        app:layout_constraintEnd_toStartOf="@+id/priceOfRoom"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:fontFamily="@font/poppins_light"
+        android:gravity="right"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259" />
 
     <TextView
         android:id="@+id/size_room"
         android:layout_width="73dp"
         android:layout_height="27dp"
-        android:layout_marginStart="35dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/poppins_light"
         android:text="Size"
-        app:layout_constraintBottom_toTopOf="@+id/price_room"
-        app:layout_constraintEnd_toStartOf="@+id/sizeOfRoom"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/balconyBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Balcony"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox15"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox14" />
-
-    <CheckBox
-        android:id="@+id/checkBox14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
-        android:text="Restaurant"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox16"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="150dp"
-        android:text="Swimming Pool"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="150dp"
-        android:text="Fitness Center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox15" />
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
 
     <CheckBox
         android:id="@+id/refrigeratorBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
         android:text="Refrigerator"
-        app:layout_constraintBottom_toTopOf="@+id/balconyBox"
-        app:layout_constraintEnd_toStartOf="@+id/wifiBox" />
-
-    <CheckBox
-        android:id="@+id/wifiBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="437dp"
-        android:layout_marginEnd="165dp"
-        android:text="Wifi"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox14"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/bathubBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:text="Bathub"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox15"
-        app:layout_constraintEnd_toStartOf="@+id/balconyBox"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 
     <CheckBox
         android:id="@+id/acBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="11dp"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
         android:text="AC"
-        app:layout_constraintBottom_toTopOf="@+id/bathubBox"
-        app:layout_constraintEnd_toStartOf="@+id/refrigeratorBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/facility_room" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <CheckBox
+        android:id="@+id/poolBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
+        android:text="Swimming Pool"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <CheckBox
+        android:id="@+id/restaurantBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
+        android:text="Restaurant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <CheckBox
+        android:id="@+id/balconyBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
+        android:text="Balcony"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <CheckBox
+        android:id="@+id/wifiBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
+        android:text="Wifi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <CheckBox
+        android:id="@+id/bathubBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_light"
+        android:text="Bathub"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <Button
+        android:id="@+id/fromDate"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="JAN 01 2023"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <TextView
+        android:id="@+id/fromText"
+        android:layout_width="73dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="162dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="From"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791" />
+
+    <Button
+        android:id="@+id/cancelBookBtn"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="56dp"
+        android:text="Cancel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
+
+    <TextView
+        android:id="@+id/toText"
+        android:layout_width="73dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="162dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="To"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
+
+    <Button
+        android:id="@+id/confirmBookButton"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:text="Confirm"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toEndOf="@+id/cancelBookBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
+
+    <Button
+        android:id="@+id/toDate"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="JAN 01 2026"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.874" />
+
+    <Button
+        android:id="@+id/bookingButton"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:text="Booking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

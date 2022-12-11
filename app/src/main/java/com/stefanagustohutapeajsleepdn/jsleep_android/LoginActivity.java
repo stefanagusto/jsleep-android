@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.stefanagustohutapeajsleepdn.jsleep_android.model.Account;
 import com.stefanagustohutapeajsleepdn.jsleep_android.request.BaseApiService;
@@ -23,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     BaseApiService mApiService;
     EditText username, password;
     Context mContext;
-
+    Switch darkMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,19 @@ public class LoginActivity extends AppCompatActivity {
         mContext = this;
         username = findViewById(R.id.UsernameLogin);
         password = findViewById(R.id.PasswordLogin);
+        darkMode = findViewById(R.id.switchDarkMode);
+        darkMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (darkMode.isChecked()) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    Toast.makeText(mContext, "Dark Mode On", Toast.LENGTH_SHORT).show();
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    Toast.makeText(mContext, "Dark Mode Off", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
         register.setOnClickListener(new View.OnClickListener() {
