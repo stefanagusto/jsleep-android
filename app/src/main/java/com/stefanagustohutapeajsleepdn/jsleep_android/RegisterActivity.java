@@ -17,12 +17,22 @@ import com.stefanagustohutapeajsleepdn.jsleep_android.request.UtilsApi;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
 
+/**
+ * Register Activity to register the account of user
+ */
 public class RegisterActivity extends AppCompatActivity {
     BaseApiService mApiService;
     EditText name, email, password;
     Context mContext;
 
+    /**
+     * Method to create the register activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +52,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+    /**
+     * Request register to register the account of user
+     */
     protected Account requestRegister(){
         mApiService.registerRequest(
                 name.getText().toString(),

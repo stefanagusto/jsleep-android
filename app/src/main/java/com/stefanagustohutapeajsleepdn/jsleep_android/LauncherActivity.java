@@ -10,6 +10,14 @@ import android.util.Log;
 
 import java.util.Timer;
 import java.util.TimerTask;
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
+
+/**
+ * Launcher Activity to show the logo of the app and set timer to 3 seconds
+ */
 
 public class LauncherActivity extends AppCompatActivity {
     Timer timer;

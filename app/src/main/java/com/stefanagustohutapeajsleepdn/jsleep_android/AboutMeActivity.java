@@ -22,6 +22,22 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
+/**
+ * This is the AboutMeActivity class which extends AppCompatActivity and is responsible for
+ * providing the functionality for the "About Me" screen of the app.
+ *
+ * The class declares several member variables for the UI elements of the screen, such as
+ * text views, edit texts, and buttons. It also declares a BaseApiService instance for making
+ * API calls and a Context instance for accessing Android system services.
+ *
+ * The class overrides the onCreate() method of AppCompatActivity to inflate the layout,
+ * initialize the member variables, and set up event listeners for the buttons. It also
+ * defines a topUpRequest() method which is called when the user clicks the top-up button.
+ */
 public class AboutMeActivity extends AppCompatActivity {
         BaseApiService mApiService;
         TextView name, email, balance, nameRent, addRent, phoneRent, nameOfRent, addOfRent, phoneOfRent;
@@ -35,6 +51,11 @@ public class AboutMeActivity extends AppCompatActivity {
         mApiService = UtilsApi.getApiService();
         mContext = this;
         topupBtn = findViewById(R.id.buttonTopup);
+        /**
+         * This method is called when the user clicks the top-up button. It is responsible for
+         * handling the top-up request, such as making the necessary API calls and updating the UI
+         * accordingly.
+         */
         topupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +98,13 @@ public class AboutMeActivity extends AppCompatActivity {
             regRenBtn.setVisibility(View.VISIBLE);
         }
 
+        /**
+
+         This method is called when the logout button is clicked.
+         It sets the "remember" SharedPreference to "false" and
+         launches the LoginActivity.
+         @param view The view that was clicked (in this case, the logout button)
+         */
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,6 +118,13 @@ public class AboutMeActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Shows the registration form for renters and registers a new renter when the
+     * registration button is clicked. Hides the registration form when the cancel
+     * button is clicked.
+     *
+     * @param view the view that triggered the method call
+     */
     public void registerRenClick(View view){
         nameReg.setVisibility(View.VISIBLE);
         addReg.setVisibility(View.VISIBLE);
@@ -99,6 +134,11 @@ public class AboutMeActivity extends AppCompatActivity {
         regRenBtn.setVisibility(Button.INVISIBLE);
     }
 
+    /**
+     * Hides the registration form for renters.
+     *
+     * @param view the view that triggered the method call
+     */
     public void cancelClick(View view){
         nameReg.setVisibility(View.INVISIBLE);
         addReg.setVisibility(View.INVISIBLE);
@@ -107,7 +147,11 @@ public class AboutMeActivity extends AppCompatActivity {
         cancelBtn.setVisibility(Button.INVISIBLE);
         regRenBtn.setVisibility(Button.VISIBLE);
     }
-
+    /**
+     * Registers a new renter and hides the registration form.
+     *
+     * @param view the view that triggered the method call
+     */
     public void registerClick(View view){
         Account account = registerRenter();
         nameReg.setVisibility(View.INVISIBLE);
@@ -117,6 +161,11 @@ public class AboutMeActivity extends AppCompatActivity {
         cancelBtn.setVisibility(Button.INVISIBLE);
     }
 
+    /**
+     * Makes a request to top up the user's account.
+     *
+     * @return a boolean indicating whether the top up request was successful
+     */
     protected Boolean topUpRequest(){
         Double topUpAmount = Double.parseDouble(amountTopUp.getText().toString());
         mApiService.topUp(MainActivity.loginAccount.id, Double.parseDouble(amountTopUp.getText().toString())).enqueue(new Callback<Boolean>() {
@@ -139,7 +188,9 @@ public class AboutMeActivity extends AppCompatActivity {
         return false;
     }
 
-
+    /**
+     * Registers a new renter.
+     */
     protected Account registerRenter(){
         mApiService.registerRenter(
                 MainActivity.loginAccount.id,

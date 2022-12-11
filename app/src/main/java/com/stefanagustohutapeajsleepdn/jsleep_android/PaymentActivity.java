@@ -18,7 +18,14 @@ import com.stefanagustohutapeajsleepdn.jsleep_android.request.UtilsApi;
 
 import java.util.Timer;
 import java.util.TimerTask;
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
 
+/**
+ * Payment Activity to show the payment details
+ */
 public class PaymentActivity extends AppCompatActivity {
     BaseApiService mApiService;
     TextView roomName, roomAddress, roomPrice, roomSize, roomBedType;
@@ -75,6 +82,9 @@ public class PaymentActivity extends AppCompatActivity {
             }
         }
 
+        /**
+         * Cancel button to cancel the payment
+         */
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,6 +95,9 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Pay button to pay the room
+         */
         payBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +107,9 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * timer to cancel the payment after 10 s
+         */
         timer.schedule(new TimerTask() {
             @Override
             public void run() {

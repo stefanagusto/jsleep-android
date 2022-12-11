@@ -33,7 +33,14 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
 
+/**
+ * Main Activity to list the listview of the rooms already created
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static Account loginAccount;
@@ -131,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Method to get all the room from the database
+     */
     protected Room getAllRoom(int page) {
         mApiService.getAllRoom(page-1, pageSize).enqueue(new Callback<List<Room>>() {
             @Override
@@ -164,6 +174,9 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
+    /**
+     * Method to get the room by id
+     */
     public static ArrayList<String> getName(List<Room> roomList){
         ArrayList<String> name = new ArrayList<String>();
         int i = 0;
@@ -173,6 +186,9 @@ public class MainActivity extends AppCompatActivity {
         return name;
     }
 
+    /**
+     * Method to know which room is clicked
+     */
     public void OnItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
         Log.i("HelloListView", "You clicked Item: " + id + " at position:" + pos);
         Intent move = new Intent(MainActivity.this, DetailRoomActivity.class);

@@ -23,7 +23,16 @@ import com.stefanagustohutapeajsleepdn.jsleep_android.request.UtilsApi;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
 
+/**
+ * LoginActivity is an activity that provides a login form for the user to enter their
+ * username and password. It also includes options for switching to dark mode and
+ * remembering the user's login information.
+ */
 public class LoginActivity extends AppCompatActivity {
     BaseApiService mApiService;
     EditText username, password;
@@ -104,6 +113,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * requestAccount is a method that sends a request to the server to get the user's
+     */
     protected Account requestAccount() {
         mApiService.getAccount(0).enqueue(new Callback<Account>() {
             @Override
@@ -121,6 +133,10 @@ public class LoginActivity extends AppCompatActivity {
         return null;
     }
 
+    /**
+     * requestLogin is a method that sends a request to the server to get the user's
+     * login information.
+     */
     protected Account requestLogin() {
         String username = this.username.getText().toString();
         String password = this.password.getText().toString();

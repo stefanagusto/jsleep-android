@@ -25,7 +25,14 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
 
+/**
+ * An activity that allows users to create a new room.
+ */
 public class CreateRoomActivity extends AppCompatActivity {
     BaseApiService mApiService;
     Context mContext;
@@ -68,6 +75,10 @@ public class CreateRoomActivity extends AppCompatActivity {
 
         createRoom = findViewById(R.id.createButton);
         cancelRoom = findViewById(R.id.cancelButton);
+        /**
+         * Sets a click listener on the `createRoom` button to initiate the `createRequest` method
+         * and navigate to the `MainActivity` page when the button is clicked.
+         */
         createRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,7 +116,9 @@ public class CreateRoomActivity extends AppCompatActivity {
         });
         return null;
     }
-
+    /**
+     * To Check Facility to the facility.java
+     */
     public ArrayList<Facility> checkFacility () {
         if (AC.isChecked()) {
             facility.add(Facility.AC);

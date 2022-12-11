@@ -26,6 +26,16 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
+
+/**
+ * The `DetailRoomActivity` class extends the `AppCompatActivity` class and provides
+ * a graphical user interface for displaying details about a particular room, as well
+ * as allowing the user to book the room for a specified date range.
+ */
 public class DetailRoomActivity extends AppCompatActivity {
     BaseApiService mApiService;
     Context mContext;
@@ -38,8 +48,13 @@ public class DetailRoomActivity extends AppCompatActivity {
     public static String dateFrom = "0000-00-00";
     public static String dateTo = "0000-00-00";
 
-
-
+    /**
+     * The onCreate method is called when the activity is first created. It sets the
+     * content view to activity_detail_room and initializes the API service and several
+     * UI elements such as buttons and text fields.
+     *
+     * @param savedInstanceState a bundle containing the state of the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -255,6 +270,9 @@ public class DetailRoomActivity extends AppCompatActivity {
         return "Jan";
     }
 
+    /**
+     * Create a new booking
+     */
     protected Payment create(){
         System.out.println(MainActivity.loginAccount.id);
         System.out.println(MainActivity.loginAccount.renter.id);
@@ -271,19 +289,20 @@ public class DetailRoomActivity extends AppCompatActivity {
             public void onResponse(Call<Payment> call, Response<Payment> response) {
                 if(response.isSuccessful()){
                     MainActivity.paymentAccount = response.body();
+                    MainActivity.loginAccount.balance -= MainActivity.paymentAccount.totalPrice;
                     System.out.println("Berhasil");
                     Intent move = new Intent(DetailRoomActivity.this, PaymentActivity.class);
                     startActivity(move);
                     Toast toast = Toast.makeText(getApplicationContext(), "Payment Menu", Toast.LENGTH_SHORT);
                     toast.show();
-                    MainActivity.loginAccount.balance = MainActivity.loginAccount.balance - tempRoom.price.price;
                 }
             }
 
             @Override
             public void onFailure(Call<Payment> call, Throwable t) {
-                System.out.println(t.toString());
-                Toast.makeText(mContext, "Booking Failed", Toast.LENGTH_SHORT).show();
+                System.out.println("Gagal");
+                Toast toast = Toast.makeText(getApplicationContext(), "Payment Menu", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
         return null;
