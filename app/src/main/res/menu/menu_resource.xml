@@ -4,7 +4,7 @@
     <item android:id="@+id/SearchButton"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="Search Button"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:actionViewClass="android.widget.SearchView"
         app:showAsAction="collapseActionView|always"/>
     <item android:id="@+id/PersonButton"
         android:icon="@drawable/ic_baseline_person_24"

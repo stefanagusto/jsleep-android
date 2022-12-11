@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,8 +50,10 @@ public class MainActivity extends AppCompatActivity {
     List<Room> account ;
     ListView listView;
     Button prev, next, go;
-    int currPage = 1, pageSize = 5;
+    MenuItem add, person, search;
+    int currPage = 1, pageSize = 10;
     EditText pageNumber;
+    public static ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem register = menu.findItem(R.id.AddBoxButton);
-        if (loginAccount.renter == null) {
+        if (loginAccount == null) {
             register.setVisible(false);
         } else {
             register.setVisible(true);
@@ -144,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(mContext, "No More Room to List", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, names);
+                    adapter = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, names);
                     ListView listView = (ListView) findViewById(R.id.view_list);
                     listView.setAdapter(adapter);
                     pageNumber.setText(String.valueOf(page));
@@ -178,4 +181,5 @@ public class MainActivity extends AppCompatActivity {
         move.putExtra("ID", id);
         startActivity(move);
     }
+
 }

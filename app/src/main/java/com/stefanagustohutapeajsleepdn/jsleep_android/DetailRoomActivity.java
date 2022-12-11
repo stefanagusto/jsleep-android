@@ -262,7 +262,10 @@ public class DetailRoomActivity extends AppCompatActivity {
         System.out.println(fromBtn.getText().toString());
         System.out.println(toBtn.getText().toString());
 
-        mApiService.createPayment(MainActivity.loginAccount.id, MainActivity.loginAccount.renter.id, tempRoom.id, dateFrom.toString(),
+        mApiService.createPayment(MainActivity.loginAccount.id,
+                MainActivity.loginAccount.renter.id,
+                tempRoom.id,
+                dateFrom.toString(),
                 dateTo .toString()).enqueue(new Callback<Payment>() {
             @Override
             public void onResponse(Call<Payment> call, Response<Payment> response) {

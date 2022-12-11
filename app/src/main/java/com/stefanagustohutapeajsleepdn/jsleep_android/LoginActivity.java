@@ -2,9 +2,12 @@ package com.stefanagustohutapeajsleepdn.jsleep_android;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -26,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, password;
     Context mContext;
     Switch darkMode;
+    CheckBox remember;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,18 @@ public class LoginActivity extends AppCompatActivity {
         username = findViewById(R.id.UsernameLogin);
         password = findViewById(R.id.PasswordLogin);
         darkMode = findViewById(R.id.switchDarkMode);
+        remember = findViewById(R.id.rememberCheckBox);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkbox = sharedPreferences.getString("remember", "");
+
+        if (checkbox.equals("true")) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        } else if (checkbox.equals("false")) {
+            Toast.makeText(this, "No Login", Toast.LENGTH_SHORT).show();
+        }
+
         darkMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +80,26 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Account account = requestAccount();
                 Account login = requestLogin();
+            }
+        });
+
+        remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "true");
+                    editor.apply();
+                    Toast.makeText(LoginActivity.this, "Checked", Toast.LENGTH_SHORT).show();
+                }else if (!compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "false");
+                    editor.apply();
+                    Toast.makeText(LoginActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -106,6 +141,4 @@ public class LoginActivity extends AppCompatActivity {
         });
         return null;
     }
-
-
 }

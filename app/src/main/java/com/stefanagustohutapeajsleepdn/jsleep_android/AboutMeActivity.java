@@ -1,7 +1,10 @@
 package com.stefanagustohutapeajsleepdn.jsleep_android;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +26,7 @@ public class AboutMeActivity extends AppCompatActivity {
         BaseApiService mApiService;
         TextView name, email, balance, nameRent, addRent, phoneRent, nameOfRent, addOfRent, phoneOfRent;
         EditText nameReg, addReg, phoneReg, amountTopUp;
-        Button regBtn, cancelBtn, regRenBtn, topupBtn;
+        Button regBtn, cancelBtn, regRenBtn, topupBtn, logoutBtn;
         Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class AboutMeActivity extends AppCompatActivity {
                 topUpRequest();
             }
         });
-
+        logoutBtn = findViewById(R.id.logoutButton);
         name = findViewById(R.id.nameOfUser);
         email = findViewById(R.id.emailOfUser);
         balance = findViewById(R.id.balanceOfUser);
@@ -73,6 +76,18 @@ public class AboutMeActivity extends AppCompatActivity {
         if (MainActivity.loginAccount.renter == null) {
             regRenBtn.setVisibility(View.VISIBLE);
         }
+
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "false");
+                editor.apply();
+                Intent move = new Intent(AboutMeActivity.this, LoginActivity.class);
+                startActivity(move);
+            }
+        });
     }
 
     public void registerRenClick(View view){

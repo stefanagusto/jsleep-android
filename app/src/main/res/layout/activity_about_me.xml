@@ -141,16 +141,16 @@
         android:id="@+id/buttonCancel"
         android:layout_width="119dp"
         android:layout_height="48dp"
+        android:fontFamily="@font/poppins_light"
         android:onClick="cancelClick"
         android:text="@string/cancel"
         android:visibility="invisible"
-        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintVertical_bias="0.895" />
 
     <TextView
         android:id="@+id/nameOfRenter"
@@ -184,16 +184,16 @@
         android:id="@+id/buttonRegister"
         android:layout_width="119dp"
         android:layout_height="48dp"
+        android:fontFamily="@font/poppins_light"
         android:onClick="registerClick"
         android:text="@string/register_aboutme"
         android:visibility="invisible"
-        android:fontFamily="@font/poppins_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintVertical_bias="0.896" />
 
     <EditText
         android:id="@+id/address_register"
@@ -325,5 +325,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.534" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
