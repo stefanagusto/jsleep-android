@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         } else if (checkbox.equals("false")) {
-            Toast.makeText(this, "No Login", Toast.LENGTH_SHORT).show();
+            System.out.println("Please Sign In");
         }
 
         darkMode.setOnClickListener(new View.OnClickListener() {

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -112,6 +111,7 @@ public class AboutMeActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("remember", "false");
                 editor.apply();
+                Toast.makeText(mContext, "Logout Successful", Toast.LENGTH_SHORT).show();
                 Intent move = new Intent(AboutMeActivity.this, LoginActivity.class);
                 startActivity(move);
             }
@@ -209,6 +209,8 @@ public class AboutMeActivity extends AppCompatActivity {
                     System.out.println(MainActivity.loginAccount.renter.username);
                     System.out.println(MainActivity.loginAccount.renter.address);
                     System.out.println(MainActivity.loginAccount.renter.phoneNumber);
+                    Intent move = new Intent(AboutMeActivity.this, MainActivity.class);
+                    startActivity(move);
                     nameOfRent.setText(MainActivity.loginAccount.renter.username);
                     addOfRent.setText(MainActivity.loginAccount.renter.address);
                     phoneOfRent.setText(MainActivity.loginAccount.renter.phoneNumber);

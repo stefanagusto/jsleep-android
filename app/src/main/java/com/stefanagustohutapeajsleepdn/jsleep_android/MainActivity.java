@@ -18,15 +18,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
 import com.stefanagustohutapeajsleepdn.jsleep_android.model.Account;
 import com.stefanagustohutapeajsleepdn.jsleep_android.model.Payment;
 import com.stefanagustohutapeajsleepdn.jsleep_android.model.Room;
 import com.stefanagustohutapeajsleepdn.jsleep_android.request.BaseApiService;
 import com.stefanagustohutapeajsleepdn.jsleep_android.request.UtilsApi;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,7 +106,25 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         getMenuInflater().inflate(R.menu.menu_resource, menu);
-        return true;
+        add = menu.findItem(R.id.AddBoxButton);
+        person = menu.findItem(R.id.PersonButton);
+
+        MenuItem searchItem = menu.findItem(R.id.SearchButton);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setQueryHint("Search Room");
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -197,5 +212,4 @@ public class MainActivity extends AppCompatActivity {
         move.putExtra("ID", id);
         startActivity(move);
     }
-
 }

@@ -66,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     MainActivity.requestRegister = response.body();
                     Toast.makeText(mContext, "Register Successful!", Toast.LENGTH_SHORT).show();
-                    Intent move = new Intent(RegisterActivity.this, MainActivity.class);
+                    Intent move = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(move);
                 }
             }

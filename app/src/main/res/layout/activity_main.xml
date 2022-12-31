@@ -26,6 +26,7 @@
             android:layout_weight="1"
             android:text="prev"
             android:fontFamily="@font/poppins_light"
+            android:background="#37E1D2"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="53dp" />
 
@@ -38,6 +39,7 @@
             android:layout_weight="1"
             android:text="next"
             android:fontFamily="@font/poppins_light"
+            android:background="#37E1D2"
             tools:layout_editor_absoluteX="121dp"
             tools:layout_editor_absoluteY="53dp" />
 
@@ -63,6 +65,7 @@
             android:layout_weight="1"
             android:text="go"
             android:fontFamily="@font/poppins_light"
+            android:background="#37E1D2"
             tools:layout_editor_absoluteX="297dp"
             tools:layout_editor_absoluteY="53dp" />
     </LinearLayout>

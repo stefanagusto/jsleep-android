@@ -88,6 +88,10 @@ public class CreateRoomActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Creates a new room.
+     */
     protected Room createRequest () {
         ArrayList<Facility> checkedFacility = checkFacility();
         System.out.println(checkedFacility);

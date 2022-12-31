@@ -230,6 +230,7 @@ public class DetailRoomActivity extends AppCompatActivity {
         return getMonthFormat(month) + " " + day + " " + year;
     }
 
+    //get month format
     private String getMonthFormat(int month) {
         if (month == 1) {
             return "Jan";

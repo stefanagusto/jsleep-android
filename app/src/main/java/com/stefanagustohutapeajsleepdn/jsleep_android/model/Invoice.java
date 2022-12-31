@@ -1,5 +1,8 @@
 package com.stefanagustohutapeajsleepdn.jsleep_android.model;
-
+/**
+ * Javadoc
+ * @author Stefan Agusto Hutapea
+ */
 public class Invoice extends Serializable {
     public int buyerId, renterId;
 

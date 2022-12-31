@@ -88,10 +88,11 @@ public class PaymentActivity extends AppCompatActivity {
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.loginAccount.balance = MainActivity.loginAccount.balance + tempRoom.price.price;
+                MainActivity.loginAccount.balance += MainActivity.paymentAccount.totalPrice;
                 Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
                 startActivity(intent);
                 Toast.makeText(PaymentActivity.this, "Room Booking Canceled", Toast.LENGTH_SHORT).show();
+                timer.cancel();
             }
         });
 
@@ -101,9 +102,15 @@ public class PaymentActivity extends AppCompatActivity {
         payBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
-                startActivity(intent);
-                Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                if (MainActivity.loginAccount.balance >= MainActivity.paymentAccount.totalPrice) {
+                    MainActivity.loginAccount.balance -= MainActivity.paymentAccount.totalPrice;
+                    Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                    timer.cancel();
+                } else {
+                    Toast.makeText(PaymentActivity.this, "Insufficient Balance", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -113,7 +120,7 @@ public class PaymentActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                MainActivity.loginAccount.balance = MainActivity.loginAccount.balance + tempRoom.price.price;
+                MainActivity.loginAccount.balance += MainActivity.paymentAccount.totalPrice;
                 Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
                 startActivity(intent);
             }
