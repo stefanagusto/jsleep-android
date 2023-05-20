@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3FFE2"
     tools:context=".DetailRoomActivity">
 
     <CheckBox
@@ -331,7 +332,7 @@
         android:layout_marginStart="56dp"
         android:text="Cancel"
         android:visibility="invisible"
-        android:background="#37E1D2"
+        android:background="@drawable/round_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -358,7 +359,7 @@
         android:layout_height="49dp"
         android:text="Confirm"
         android:visibility="invisible"
-        android:background="#37E1D2"
+        android:background="@drawable/round_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.575"
@@ -386,13 +387,27 @@
         android:id="@+id/bookingButton"
         android:layout_width="108dp"
         android:layout_height="49dp"
+        android:background="@drawable/round_btn"
         android:text="Booking"
-        android:background="#37E1D2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:background="@drawable/round_btn"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

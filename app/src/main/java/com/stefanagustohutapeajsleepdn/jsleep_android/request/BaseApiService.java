@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -62,4 +63,7 @@ public interface BaseApiService {
                                 @Query("roomId") int roomId,
                                 @Query("from") String from,
                                 @Query("to") String to);
+
+    @DELETE("/room/{id}/delete")
+    Call<Boolean> deleteRoom(@Path("id") int id);
 }

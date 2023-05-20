@@ -41,7 +41,7 @@ public class DetailRoomActivity extends AppCompatActivity {
     Context mContext;
     TextView roomName, roomAddress, roomPrice, roomSize, roomBedType, fromText, toText;
     CheckBox ac, refr, wifi, bath, balcon, rest, pool, fitn;
-    Button bookBtn, cancelBtn, bookingBtn;
+    Button bookBtn, cancelBtn, bookingBtn, deleteBtn;
     private DatePickerDialog datePickerDialog, datePickerDialog2;
     private Button fromBtn, toBtn;
     public static Room tempRoom;
@@ -70,6 +70,7 @@ public class DetailRoomActivity extends AppCompatActivity {
         fromBtn = findViewById(R.id.fromDate);
         toBtn = findViewById(R.id.toDate);
         bookingBtn = findViewById(R.id.bookingButton);
+        deleteBtn = findViewById(R.id.deleteButton);
         bookBtn = findViewById(R.id.confirmBookButton);
         cancelBtn = findViewById(R.id.cancelBookBtn);
 
@@ -162,6 +163,16 @@ public class DetailRoomActivity extends AppCompatActivity {
                 }
             }
         });
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                delete();
+                Toast.makeText(DetailRoomActivity.this, "Room deleted", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DetailRoomActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -308,4 +319,23 @@ public class DetailRoomActivity extends AppCompatActivity {
         });
         return null;
     }
+
+    protected void delete() {
+        mApiService.deleteRoom(tempRoom.accountId).enqueue(new Callback<Boolean>() {
+            @Override
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                if (response.isSuccessful() && response.body() != null && response.body()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Delete Room", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Boolean> call, Throwable t) {
+                Toast toast = Toast.makeText(getApplicationContext(), "Failed to delete room", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+    }
 }
+
